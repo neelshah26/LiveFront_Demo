@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LiveFront_Demo</string>
+    <string name="product_title">Product Title</string>
+    <string name="product_price">Price</string>
+    <string name="product_brand">Brand</string>
+    <string name="product_category">Category :</string>
+    <string name="rating">Rating :</string>
+    <string name="product_description">Description :</string>
+</resources>
