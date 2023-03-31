@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testting.UIScreens.ItemDetail
@@ -40,8 +41,7 @@ class ProductAdapter(
     override fun onBindViewHolder(holder: ProductAdapter.CourseViewHolder, position: Int) {
         // on below line we are setting data to our text view and our image view.
         holder.titleTV.text = productList.get(position).title
-        val cat: String = "->" + productList.get(position).category
-        holder.titleTV.setOnClickListener(View.OnClickListener {
+        holder.card.setOnClickListener(View.OnClickListener {
             val intent = Intent(it.context, ItemDetail::class.java)
             intent.putExtra("item_data", productList.get(position) as Serializable)
             context.startActivity(intent)
@@ -65,6 +65,7 @@ class ProductAdapter(
         val titleTV: TextView = itemView.findViewById(R.id.tvname)
         val displayIV: ImageView = itemView.findViewById(R.id.ivdisplay)
         val priceTV: TextView = itemView.findViewById(R.id.tvprice)
+        val card: LinearLayout = itemView.findViewById(R.id.llcard)
 
     }
 }
